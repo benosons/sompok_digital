@@ -1,0 +1,195 @@
+{% extends "admin/survey/layout.html" %} {% block content %}
+<style>
+    #formFile::before {
+        content: "Pick file";
+        position: absolute;
+        z-index: 2;
+        display: block;
+        background-color: #eee;
+        width: 80px;
+    }
+</style>
+<div class="page-content" style="padding: 0!important;">
+    <div class="container-fluid">
+
+        <!-- start page title -->
+        <div class="row">
+            
+            
+        </div>
+        <!-- end page title -->
+
+        <div class="row">
+            <div hidden class="col-xl-12">
+                <div class="card overflow-hidden border border-warning">
+                    <div class="bg-dark">
+                        <div class="row">
+                            
+                            <!-- <div class="col-12">
+                                <img src="{{baseURL}}/assets/img/presisi.png" alt="" class="img-fluid">
+                            </div> -->
+                            <div class="col-12">
+                                <h6 class="text-light p-4 text-center">
+                                    "KEPUASAN ANDA ADALAH KOMITMEN KAMI"
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body pt-0">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <table class="table table-borderless mb-0">
+                                    <tbody>
+                                        <tr>
+                                            <td><img src="{{baseURL}}/assets/img/kapolres.jpg" alt="" class="img-thumbnail rounded"></td>
+                                            <!-- <td><img src="{{baseURL}}/assets/img/kapolres.jpg" alt="" class="img-thumbnail rounded"></td> -->
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">AKBP ALDI SUBARTONO, S.H., S.I.K., M.H., CPHR</td>
+                                            <!-- <td class="text-center">AKBP ALDI SUBARTONO, S.H., S.I.K., M.H., CPHR</td> -->
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center mb-sm-0 font-size-12"><b>KAPOLRES CIMAHI</b></td>
+                                            <!-- <td class="text-center mb-sm-0 font-size-12"><b>WAKAPOLRES CIMAHI</b></td> -->
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- <div class="col-sm-4">
+                                <div class="profile-user-wid mb-4">
+                                    <img src="{{baseURL}}/assets/img/kapolres.jpg" alt="" class="img-thumbnail rounded">
+                                </div>
+                                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <h4 class="mb-sm-0 font-size-15 text-center">AKBP ALDI SUBARTONO, S.H., S.I.K., M.H., CPHR</h4>
+                                        </div>
+                                        <div class="col-12">
+                                            <h5 class="mb-sm-0 font-size-14 text-center">KAPOLRES CIMAHI</h5>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div> -->
+
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-xl-12">
+                <div class="card overflow-hidden border border-warning">
+                    <div class="bg-dark">
+                        <img src="{{baseURL}}/assets/img/atas.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="d-sm-flex align-items-center justify-content-between">
+                    <h3 class="mb-sm-0 font-size-18 text-center fw-bolder">SELAMAT DATANG Di POLRES CIMAHI</h3>
+                    <h3 class="mb-sm-0 font-size-18 text-center fw-bolder"></h3>
+                    <h3 class="mb-sm-0 font-size-18 text-center fw-bolder">Silahkan Mengisi Buku Tamu</h3>
+                </div>
+            </div>
+            <div class="col-xl-12">
+                <div class="card border border-warning">
+                    <div class="card-body">
+                        <h4 class="card-title mb-1">Silahkan Masukan Identitas</h4>
+
+                        <div class="mb-1">
+                            <label for="formrow-firstname-input" class="form-label">Nama</label>
+                            <input type="text" class="form-control" id="nama" placeholder="">
+                        </div>
+                        <div class="mb-1">
+                            <label for="formrow-firstname-input" class="form-label">Nomor Telepon</label>
+                            <input type="text" class="form-control" id="telp" placeholder="" onkeypress="return onlyNumberKey(event)">
+                        </div>
+                        <div class="mb-3">
+                            <label class="d-block mb-3">Jenis Kelamin :</label>
+
+                            <div class="form-check form-check-inline" style="width: 50%;">
+                                <input class="form-check-input" type="radio" name="jenis_kelamin" id="inlineRadio1" value="L">
+                                <label class="form-check-label" for="inlineRadio1">Laki-laki</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="jenis_kelamin" id="inlineRadio2" value="P">
+                                <label class="form-check-label" for="inlineRadio2">Perempuan</label>
+                            </div>                                                          
+                        </div>
+                        <!-- <div class="mb-3">
+                            <label for="pendidikan" class="form-label">Pendidikan</label>
+                            <select id="pendidikan" class="form-select" >
+                                <option>Pilih...</option>
+                                <option value="SD">SD</option>
+                                <option value="SMP">SMP</option>
+                                <option value="SMA">SMA</option>
+                                <option value="S1">S1</option>
+                                <option value="S2">S2</option>
+                                <option value="S3">S3</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="pendidikan" class="form-label">Pekerjaan</label>
+                            <select id="pendidikan" class="form-select" >
+                                <option>Pilih...</option>
+                                <option value="PNS">PNS</option>
+                                <option value="TNI">TNI</option>
+                                <option value="POLRI">POLRI</option>
+                                <option value="SWASTA">SWASTA</option>
+                                <option value="WIRAUSAHA">WIRAUSAHA</option>
+                                <option value="LAINNYA">LAINNYA</option>
+                            </select>
+                        </div> -->
+                        <div class="mb-1">
+                            <div>
+                                <label for="ektp" class="form-label">Foto Identitas</label>
+                                <input class="form-control" id="ektp" type="file" accept="image/*">
+                            </div>
+                        </div>
+                        <div class="mb-1">
+                            <img class="rounded me-2"  width="100%" id="previewKtp" >
+                        </div>
+                        
+                        <div class="mb-1">
+                            <div>
+                                <label for="ektp" class="form-label">Foto Selfie</label>
+                                <input class="form-control" id="selfie" type="file" accept="image/*">
+                            </div>
+                            
+                        </div>
+                        <div class="mb-1">
+                            <img class="rounded me-2"  width="100%" id="previewSelfie" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="tujuan" class="form-label">Tujuan</label>
+                            <select id="tujuan" class="form-select" >
+                                <option selected="">Pilih...</option>
+                                <option>SPKT</option>
+                                <option>RESKRIM</option>
+                                <option>LANTAS</option>
+                                <option>SKCK</option>
+                                <option>PERORANGAN</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-auto">
+                            <div class="d-grid gap-2">
+                                <button type="button" class="btn btn-warning btn-lg waves-effect waves-light" id="kirim_daftar">Kirim</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end card body -->
+                </div>
+                <!-- end card -->
+            </div>
+            
+            <!-- end col -->
+        </div>
+        <!-- end row -->
+        
+    </div> <!-- container-fluid -->
+</div>
+
+
+
+{% endblock %}

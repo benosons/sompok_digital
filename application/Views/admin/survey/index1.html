@@ -1,0 +1,199 @@
+{% extends "admin/survey/layout.html" %} {% block content %}
+<div class="page-content" style="padding-top: 0!important;">
+    <div class="container-fluid">
+
+        <!-- start page title -->
+        <div class="row">
+            
+            
+        </div>
+        <!-- end page title -->
+
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card overflow-hidden border border-warning">
+                    <div class="bg-dark">
+                        <div class="row">
+                            
+                            <div class="col-12">
+                                <img src="{{baseURL}}/assets/img/atas.png" alt="" class="img-fluid" height="22">
+                            </div>
+                            <!-- <div class="col-12">
+                                <h5 class="text-light text-center">
+                                    Kepuasan Anda Adalah Komitmen Kami
+                                </h5>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="card-body pt-0 mb-0" hidden>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <table class="table table-borderless mb-0">
+                                    <tbody>
+                                        <tr>
+                                            <td style="padding: 0;"><img src="{{baseURL}}/assets/img/kapolres.jpg" alt="" class="img-thumbnail rounded" style="background-color: white;border: 1px solid #fff;"></td>
+                                            <!-- <td><img src="{{baseURL}}/assets/img/kapolres.jpg" alt="" class="img-thumbnail rounded"></td> -->
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center" style="padding: 0;">AKBP ALDI SUBARTONO, S.H., S.I.K., M.H., CPHR</td>
+                                            <!-- <td class="text-center">AKBP ALDI SUBARTONO, S.H., S.I.K., M.H., CPHR</td> -->
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center mb-sm-0 font-size-12" style="padding: 0;"><b>KAPOLRES CIMAHI</b></td>
+                                            <!-- <td class="text-center mb-sm-0 font-size-12"><b>WAKAPOLRES CIMAHI</b></td> -->
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- <div class="col-sm-4">
+                                <div class="profile-user-wid mb-4">
+                                    <img src="{{baseURL}}/assets/img/kapolres.jpg" alt="" class="img-thumbnail rounded">
+                                </div>
+                                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <h4 class="mb-sm-0 font-size-15 text-center">AKBP ALDI SUBARTONO, S.H., S.I.K., M.H., CPHR</h4>
+                                        </div>
+                                        <div class="col-12">
+                                            <h5 class="mb-sm-0 font-size-14 text-center">KAPOLRES CIMAHI</h5>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div> -->
+
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-12">
+                <div class="align-items-center">
+                    <h3 class="font-size-18 text-center fw-bolder">INDEKS KEPUASAN MASYARAKAT </h3>
+                    <h3 class="font-size-18 text-center fw-bolder">SENTRA PELAYANAN KEPOLISIAN TERPADU</h3>
+                </div>
+            </div>
+            <div class="col-xl-12">
+                <div class="card border border-warning">
+                    <div class="card-body">
+                        <h4 class="card-title mb-2">Silahkan Masukan Identitas</h4>
+
+                        <div class="form-floating mb-1">
+                            <input type="text" class="form-control" id="nomor" placeholder=" Nomor Telepon" onkeypress="return onlyNumberKey(event)">
+                            <label for="floatingnameInput">Nomor Telepon</label>
+                        </div>
+                        <div class="mb-2">
+                            <label class="d-block mb-2">Jenis Kelamin :</label>
+                            
+                            <div class="form-check form-check-inline" style="width: 50%;">
+                                <input class="form-check-input" type="radio" name="jenis_kelamin" id="inlineRadio1" value="L">
+                                <label class="form-check-label" for="inlineRadio1">Laki-laki</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="jenis_kelamin" id="inlineRadio2" value="P">
+                                <label class="form-check-label" for="inlineRadio2">Perempuan</label>
+                            </div>                                                          
+                        </div>
+                        <div class="form-floating mb-1">
+                            <select class="form-select" id="pendidikan" aria-label="Floating label select example">
+                                <option selected>Pilih...</option>
+                                <option value="SD">SD</option>
+                                <option value="SMP">SMP</option>
+                                <option value="SMA">SMA</option>
+                                <option value="S1">S1</option>
+                                <option value="S2">S2</option>
+                                <option value="S3">S3</option>
+                            </select>
+                            <label for="floatingSelectGrid">Pendidikan</label>
+                        </div>
+                        <div class="form-floating mb-1">
+                            <select class="form-select" id="pekerjaan" aria-label="Floating label select example">
+                                <option selected>Pilih...</option>
+                                <option value="PNS">PNS</option>
+                                <option value="TNI">TNI</option>
+                                <option value="POLRI">POLRI</option>
+                                <option value="SWASTA">SWASTA</option>
+                                <option value="WIRAUSAHA">WIRAUSAHA</option>
+                                <option value="LAINNYA">LAINNYA</option>
+                            </select>
+                            <label for="floatingSelectGrid">Pekerjaan</label>
+                        </div>
+                        
+                    </div>
+                    <!-- end card body -->
+                </div>
+                <!-- end card -->
+            </div>
+            <!-- end col -->
+
+            <div class="col-xl-12">
+                <div class="card border border-warning">
+                    <div class="card-body">
+                        <h4 class="card-title mb-1">Silahkan masukan penilaian anda.</h4>
+
+                        <table class="table table-borderless mb-0">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="row icon-demo-content">
+                                            <div class="col-xl-12 text-center">
+                                                <button onclick="emot(this, 1)" type="button" class="emot btn btn-outline-default"><i class="bx bx-smile text-success" style="font-size:50px;"></i><b>Sangat Puas</b></button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="row icon-demo-content">
+                                            <div class="col-xl-12 text-center">
+                                                <button onclick="emot(this, 2)" type="button" class="emot btn btn-outline-default"><i class="bx bx-meh text-info" style="font-size:50px;"></i><b>Puas</b></button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="row icon-demo-content">
+                                            <div class="col-xl-12 text-center">
+                                                <button onclick="emot(this, 3)" type="button" class="emot btn btn-outline-default"><i class="bx bx-sad text-danger" style="font-size:50px;"></i><b>Tidak Puas</b></button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                    </div>
+                    <!-- end card body -->
+                </div>
+                <!-- end card -->
+            </div>
+
+            <div class="col-xl-12">
+                <div class="card border border-warning">
+                    <div class="card-body">
+                        <h4 class="card-title mb-1">Silahkan masukan saran/ kritik anda.</h4>
+                        <h4 class="card-title mb-1">Terima kasih.</h4>
+
+                            <div class="mb-2">
+                                <textarea id="saran_kritik" class="form-control" maxlength="225" rows="7" placeholder=""></textarea>
+                            </div>
+                            <div class="col-sm-auto">
+                                <div class="d-grid gap-1">
+                                    <button type="button" class="btn btn-warning btn-lg waves-effect waves-light" id="kirim_survey">Kirim</button>
+                                </div>
+                            </div>
+                    </div>
+                    <!-- end card body -->
+                </div>
+                <!-- end card -->
+            </div>
+
+
+
+        </div>
+        <!-- end row -->
+        
+    </div> <!-- container-fluid -->
+</div>
+
+
+
+{% endblock %}

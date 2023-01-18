@@ -1,0 +1,203 @@
+{% extends "admin/layout.html" %} {% block content %}
+
+<div class="page-content">
+    <div class="container-fluid">
+
+        <!-- start page title -->
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                    <h4 class="mb-sm-0 font-size-18"><i class="bx bx-group"></i> Data Kepala Keluarga</h4>
+
+                    <div class="page-title-right">
+                        <ol class="breadcrumb m-0">
+                            <li class="breadcrumb-item"><a href="dashboard">Dashboard</a></li>
+                            <li class="breadcrumb-item active">Data Kepala Keluarga</li>
+                        </ol>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- end page title -->
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <div class="d-sm-flex flex-wrap">
+                                <div class="ms-auto">
+                                    <button class="btn btn-primary" id="btn_tambah" type="button" data-bs-toggle="offcanvas" data-bs-target="#tambah_kk" aria-controls="tambah_kk"><i class="bx bx-plus"></i>Tambah Kepala Keluarga</button>
+                                    <button class="btn btn-primary" id="btn_edit" type="hidden" data-bs-toggle="offcanvas" data-bs-target="#edit_kk" aria-controls="edit_kk" hidden><i class="bx bx-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-rep-plugin">
+                        <div class="table-responsive" data-pattern="priority-columns">
+                            <table id="data_kk" class="table table-bordered dt-responsive nowrap w-100">
+                                <thead class="table-light">
+                                <tr>
+                                    <th>#No</th>
+                                    <th>Nama</th>
+                                    <th>No.Telp</th>
+                                    <th>Pekerjaan</th>
+                                    <th>status</th>
+                                    <th>Keterangan</th>
+                                    <th>Tanggal</th>
+                                    <th>Berkas</th>
+                                    <th>Action</th>
+                                </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div> <!-- end col -->
+        </div> <!-- end row -->
+
+    </div> <!-- container-fluid -->
+</div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="tambah_kk" aria-labelledby="tambah_kk">
+    <div class="offcanvas-header">
+      <h5 id="tambah_kk_label">Tambah Kepala Keluarga</h5>
+      <button type="button" class="btn-close text-reset dismiss-canvas" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+            <div class="mb-3">
+                <label for="nama" class="form-label">Nama Lengkap</label>
+                <input type="text" class="form-control" id="nama" placeholder=""  name="form_kepala">
+            </div>
+
+            <div class="row">
+                
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="nomor_telepon" class="form-label">Nomor Telepon</label>
+                        <input type="text" class="form-control" id="nomor_telepon" placeholder="" name="form_kepala">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="pekerjaan" class="form-label">Pekerjaan</label>
+                        <input type="text" class="form-control" id="pekerjaan" placeholder="" name="form_kepala">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="status_" class="form-label">Status</label>
+                        <input type="text" class="form-control" id="status_" placeholder="" name="form_kepala">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="keterangan" class="form-label">Keterangan</label>
+                        <input type="text" class="form-control" id="keterangan" placeholder="" name="form_kepala">
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <div>
+                    <label for="ektp" class="form-label">Upload KTP</label>
+                    <input class="form-control" id="ektp" type="file" accept="image/*" name="form_kepala">
+                </div>
+            </div>
+            
+            <div class="mb-3">
+                <div>
+                    <label for="ektp" class="form-label">Upload Kartu Keluarga</label>
+                    <input class="form-control" id="kartu_keluarga" type="file" accept="image/*" name="form_kepala">
+                </div>
+                
+            </div>
+
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-success w-md" id="simpan_kk"><i class="bx bx-check"></i> Simpan</button>
+            </div>
+    </div>
+</div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="edit_kk" aria-labelledby="edit_kk">
+    <div class="offcanvas-header">
+      <h5 id="tambah_kk_label">Edit Kepala Keluarga</h5>
+      <button type="button" class="btn-close text-reset dismiss-canvas" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+            <div class="mb-3">
+                <label for="nama" class="form-label">Nama Lengkap</label>
+                <input type="hidden" class="form-control" id="id_edit" placeholder=""  name="form_kepala">
+                <input type="text" class="form-control" id="nama_edit" placeholder=""  name="form_kepala">
+            </div>
+
+            <div class="row">
+                
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="nomor_telepon" class="form-label">Nomor Telepon</label>
+                        <input type="text" class="form-control" id="nomor_telepon_edit" placeholder="" name="form_kepala">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="pekerjaan" class="form-label">Pekerjaan</label>
+                        <input type="text" class="form-control" id="pekerjaan_edit" placeholder="" name="form_kepala">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="status_" class="form-label">Status</label>
+                        <input type="text" class="form-control" id="status_edit" placeholder="" name="form_kepala">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="keterangan" class="form-label">Keterangan</label>
+                        <input type="text" class="form-control" id="keterangan_edit" placeholder="" name="form_kepala">
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <div>
+                    <label for="ektp" class="form-label">Upload KTP</label>
+                    <input class="form-control" id="ektp_edit" type="file" accept="image/*" name="form_kepala">
+                </div>
+            </div>
+            
+            <div class="mb-3">
+                <div>
+                    <label for="ektp" class="form-label">Upload Kartu Keluarga</label>
+                    <input class="form-control" id="kartu_keluarga_edit" type="file" accept="image/*" name="form_kepala">
+                </div>
+                
+            </div>
+
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-info w-md" id="update_kk"><i class="bx bx-check"></i> Update</button>
+            </div>
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-center" tabindex="-1" role="dialog" aria-hidden="true" id="modal_berkas">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal_title">#</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="zoom-gallery d-flex flex-wrap mb-2">
+                    <img src="" alt="images" width="100%" id="img_preview">
+                </div>
+                <div class="d-grid gap-2">
+                    <input type="hidden" id="file_name">
+                    <button type="button" class="btn btn-info btn-sm waves-effect waves-light" onclick="downloadBase64File('image/png', 'test.png')"><i class="bx bx-download"></i> download</button>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+{% endblock %}

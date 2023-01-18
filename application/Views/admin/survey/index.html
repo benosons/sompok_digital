@@ -1,0 +1,508 @@
+{% extends "admin/survey/layout.html" %} {% block content %}
+<div class="page-content">
+    <div class="container-fluid">
+
+        <!-- start page title -->
+        <div class="row">
+            
+            <div class="col-12">
+                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                    <h3 class="mb-sm-0 font-size-18 text-center fw-bolder">SURVEY KEPUASAN MASYARAKAT SENTRA PELAYANAN KEPOLISIAN TERPADU</h3>
+                </div>
+            </div>
+        </div>
+        <!-- end page title -->
+
+        <div class="row">
+                        <div class="col-xl-12">
+                <div class="card overflow-hidden border border-warning">
+                    <div class="bg-dark">
+                        <div class="row">
+                            
+                            <div class="col-12">
+                                <img src="{{baseURL}}/assets/img/presisi.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-12">
+                                <h6 class="text-light p-4 text-center">
+                                    "KEPUASAN ANDA ADALAH KOMITMEN KAMI"
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body pt-0">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <table class="">
+                                    <tbody>
+                                        <tr>
+                                            <td><img src="{{baseURL}}/assets/img/kapolres.jpg" alt="" class="img-thumbnail rounded"></td>
+                                            <td><img src="{{baseURL}}/assets/img/kapolres.jpg" alt="" class="img-thumbnail rounded"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">AKBP ALDI SUBARTONO, S.H., S.I.K., M.H., CPHR</td>
+                                            <td class="text-center">AKBP ALDI SUBARTONO, S.H., S.I.K., M.H., CPHR</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center mb-sm-0 font-size-12"><b>KAPOLRES CIMAHI</b></td>
+                                            <td class="text-center mb-sm-0 font-size-12"><b>WAKAPOLRES CIMAHI</b></td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- <div class="col-sm-4">
+                                <div class="profile-user-wid mb-4">
+                                    <img src="{{baseURL}}/assets/img/kapolres.jpg" alt="" class="img-thumbnail rounded">
+                                </div>
+                                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <h4 class="mb-sm-0 font-size-15 text-center">AKBP ALDI SUBARTONO, S.H., S.I.K., M.H., CPHR</h4>
+                                        </div>
+                                        <div class="col-12">
+                                            <h5 class="mb-sm-0 font-size-14 text-center">KAPOLRES CIMAHI</h5>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div> -->
+
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="col-xl-12">
+                <div class="card border border-warning">
+                    <div class="card-body">
+                        <h4 class="card-title mb-4">Silahkan Masukan Identitas</h4>
+
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="nomor" placeholder="NIK E-KTP/ Nomor Telepon">
+                            <label for="floatingnameInput">NIK E-KTP/ Nomor Telepon</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <select class="form-select" id="jenis_kelamin" aria-label="Floating label select example">
+                                <option selected>Pilih...</option>
+                                <option value="L">Laki - laki</option>
+                                <option value="P">Perempuan</option>
+                            </select>
+                            <label for="floatingSelectGrid">Jenis Kelamin</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <select class="form-select" id="pendidikan" aria-label="Floating label select example">
+                                <option selected>Pilih...</option>
+                                <option value="SD">SD</option>
+                                <option value="SMP">SMP</option>
+                                <option value="SMA">SMA</option>
+                                <option value="S1">S1</option>
+                                <option value="S2">S2</option>
+                                <option value="S3">S3</option>
+                            </select>
+                            <label for="floatingSelectGrid">Pendidikan</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <select class="form-select" id="pekerjaan" aria-label="Floating label select example">
+                                <option selected>Pilih...</option>
+                                <option value="PNS">PNS</option>
+                                <option value="TNI">TNI</option>
+                                <option value="POLRI">POLRI</option>
+                                <option value="SWASTA">SWASTA</option>
+                                <option value="WIRAUSAHA">WIRAUSAHA</option>
+                                <option value="LAINNYA">LAINNYA</option>
+                            </select>
+                            <label for="floatingSelectGrid">Pekerjaan</label>
+                        </div>
+                        
+                    </div>
+                    <!-- end card body -->
+                </div>
+                <!-- end card -->
+            </div>
+            <!-- end col -->
+
+            <div class="col-xl-6">
+                <div class="card border border-warning">
+                    <div class="card-body">
+                        <p class="isnumber">1</p>
+                        <h4 class="card-title mb-4">Bagaimana pendapat saudara tentang kesesuaian persyaratan pelayanan dengen jenis pelayanannya?</h4>
+
+                            <div class="mt-4">
+                                <div class="form-check form-radio-warning">
+                                    <input class="form-check-input" type="radio" name="kesesuaian" value="1">
+                                    <label class="form-check-label" for="formRadios2">
+                                        Tidak Sesuai
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="form-check form-radio-warning">
+                                    <input class="form-check-input" type="radio" name="kesesuaian" value="2">
+                                    <label class="form-check-label" for="formRadios2">
+                                        Kurang Sesuai
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="form-check form-radio-warning">
+                                    <input class="form-check-input" type="radio" name="kesesuaian" value="3">
+                                    <label class="form-check-label" for="formRadios2">
+                                        Sesuai
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="form-check form-radio-warning">
+                                    <input class="form-check-input" type="radio" name="kesesuaian" value="4">
+                                    <label class="form-check-label" for="formRadios2">
+                                        Sangat Sesuai
+                                    </label>
+                                </div>
+                            </div>
+                    </div>
+                    <!-- end card body -->
+                </div>
+                <!-- end card -->
+            </div>
+            <!-- end col -->
+
+            <div class="col-xl-6">
+                <div class="card border border-warning">
+                    <div class="card-body">
+                        <p class="isnumber">2</p>
+                        <h4 class="card-title mb-4">Bagaimana pemahaman saudara tentang kemudahan prosedur pelayanan di unit ini?</h4>
+
+                            <div class="mt-4">
+                                <div class="form-check form-radio-warning">
+                                    <input class="form-check-input" type="radio" name="kemudahan" value="1">
+                                    <label class="form-check-label" for="kemudahan">
+                                        Tidak Mudah
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="form-check form-radio-warning">
+                                    <input class="form-check-input" type="radio" name="kemudahan" value="2">
+                                    <label class="form-check-label" for="kemudahan">
+                                        Kurang Mudah
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="form-check form-radio-warning">
+                                    <input class="form-check-input" type="radio" name="kemudahan" value="3">
+                                    <label class="form-check-label" for="kemudahan">
+                                        Mudah
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="form-check form-radio-warning">
+                                    <input class="form-check-input" type="radio" name="kemudahan" value="4">
+                                    <label class="form-check-label" for="kemudahan">
+                                        Sangat Mudah
+                                    </label>
+                                </div>
+                            </div>
+                    </div>
+                    <!-- end card body -->
+                </div>
+                <!-- end card -->
+            </div>
+
+            <div class="col-xl-6">
+                <div class="card border border-warning">
+                    <div class="card-body">
+                        <p class="isnumber">3</p>
+                        <h4 class="card-title mb-4">Bagaimana pendapat saudara tentang kecepatan waktu dalam memberikan pelayanan?</h4>
+
+                            <div class="mt-4">
+                                <div class="form-check form-radio-warning">
+                                    <input class="form-check-input" type="radio" name="kecepatan" value="1">
+                                    <label class="form-check-label" for="kecepatan">
+                                        Tidak Cepat
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="form-check form-radio-warning">
+                                    <input class="form-check-input" type="radio" name="kecepatan" value="2">
+                                    <label class="form-check-label" for="kecepatan">
+                                        Kurang Cepat
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="form-check form-radio-warning">
+                                    <input class="form-check-input" type="radio" name="kecepatan" value="3">
+                                    <label class="form-check-label" for="kecepatan">
+                                        Cepat
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="form-check form-radio-warning">
+                                    <input class="form-check-input" type="radio" name="kecepatan" value="4">
+                                    <label class="form-check-label" for="kecepatan">
+                                        Sangat Cepat
+                                    </label>
+                                </div>
+                            </div>
+                    </div>
+                    <!-- end card body -->
+                </div>
+                <!-- end card -->
+            </div>
+
+            <div class="col-xl-6">
+                <div class="card border border-warning">
+                    <div class="card-body">
+                        <p class="isnumber">4</p>
+                        <h4 class="card-title mb-4">Bagaimana pendapat saudara tentang kesesuaian produk pelayanan antara yang tercantum dalam standar pelayanan dengan hasil yang diberikan?</h4>
+
+                            <div class="mt-4">
+                                <div class="form-check form-radio-warning">
+                                    <input class="form-check-input" type="radio" name="pelayanan" value="1">
+                                    <label class="form-check-label" for="pelayanan">
+                                        Tidak Sesuai
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="form-check form-radio-warning">
+                                    <input class="form-check-input" type="radio" name="pelayanan" value="2">
+                                    <label class="form-check-label" for="pelayanan">
+                                        Kurang Sesuai
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="form-check form-radio-warning">
+                                    <input class="form-check-input" type="radio" name="kecepatan" value="3">
+                                    <label class="form-check-label" for="pelayanan">
+                                        Sesuai
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="form-check form-radio-warning">
+                                    <input class="form-check-input" type="radio" name="pelayanan" value="4">
+                                    <label class="form-check-label" for="pelayanan">
+                                        Sangat Sesuai
+                                    </label>
+                                </div>
+                            </div>
+                    </div>
+                    <!-- end card body -->
+                </div>
+                <!-- end card -->
+            </div>
+
+            <div class="col-xl-6">
+                <div class="card border border-warning">
+                    <div class="card-body">
+                        <p class="isnumber">5</p>
+                        <h4 class="card-title mb-4">Bagaimana pendapat saudara tentang kompetensi/ kemampuan petugas dalam pelayanan?</h4>
+
+                            <div class="mt-4">
+                                <div class="form-check form-radio-warning">
+                                    <input class="form-check-input" type="radio" name="kompetensi" value="1">
+                                    <label class="form-check-label" for="kompetensi">
+                                        Tidak Kompeten
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="form-check form-radio-warning">
+                                    <input class="form-check-input" type="radio" name="kompetensi" value="2">
+                                    <label class="form-check-label" for="kompetensi">
+                                        Kurang Kompeten
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="form-check form-radio-warning">
+                                    <input class="form-check-input" type="radio" name="kompetensi" value="3">
+                                    <label class="form-check-label" for="kompetensi">
+                                        Kompeten
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="form-check form-radio-warning">
+                                    <input class="form-check-input" type="radio" name="kompetensi" value="4">
+                                    <label class="form-check-label" for="kompetensi">
+                                        Sangat Kompeten
+                                    </label>
+                                </div>
+                            </div>
+                    </div>
+                    <!-- end card body -->
+                </div>
+                <!-- end card -->
+            </div>
+
+            <div class="col-xl-6">
+                <div class="card border border-warning">
+                    <div class="card-body">
+                        <p class="isnumber">6</p>
+                        <h4 class="card-title mb-4">Bagaimana pendapat saudara tentang perilaku petugas dalam pelayanan terkait kesopanan dan keramahan?</h4>
+
+                            <div class="mt-4">
+                                <div class="form-check form-radio-warning">
+                                    <input class="form-check-input" type="radio" name="perilaku" value="1">
+                                    <label class="form-check-label" for="perilaku">
+                                        Tidak Sopan dan Ramah
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="form-check form-radio-warning">
+                                    <input class="form-check-input" type="radio" name="perilaku" value="2">
+                                    <label class="form-check-label" for="perilaku">
+                                        Kurang Sopan dan Ramah
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="form-check form-radio-warning">
+                                    <input class="form-check-input" type="radio" name="perilaku" value="3">
+                                    <label class="form-check-label" for="perilaku">
+                                        Sopan dan Ramah
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="form-check form-radio-warning">
+                                    <input class="form-check-input" type="radio" name="perilaku" value="4">
+                                    <label class="form-check-label" for="perilaku">
+                                        Sangat Sopan dan Ramah
+                                    </label>
+                                </div>
+                            </div>
+                    </div>
+                    <!-- end card body -->
+                </div>
+                <!-- end card -->
+            </div>
+
+            <div class="col-xl-6">
+                <div class="card border border-warning">
+                    <div class="card-body">
+                        <p class="isnumber">7</p>
+                        <h4 class="card-title mb-4">Bagaimana pendapat saudara tentang penanganan pengaduan layanan ini?</h4>
+
+                            <div class="mt-4">
+                                <div class="form-check form-radio-warning">
+                                    <input class="form-check-input" type="radio" name="penanganan" value="1">
+                                    <label class="form-check-label" for="penanganan">
+                                        Tidak ada
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="form-check form-radio-warning">
+                                    <input class="form-check-input" type="radio" name="penanganan" value="2">
+                                    <label class="form-check-label" for="penanganan">
+                                        Ada tetapi tidak berfungsi
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="form-check form-radio-warning">
+                                    <input class="form-check-input" type="radio" name="penanganan" value="3">
+                                    <label class="form-check-label" for="penanganan">
+                                        Berfungsi kurang maksimal
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="form-check form-radio-warning">
+                                    <input class="form-check-input" type="radio" name="penanganan" value="4">
+                                    <label class="form-check-label" for="penanganan">
+                                        Dikelola dengan baik
+                                    </label>
+                                </div>
+                            </div>
+                    </div>
+                    <!-- end card body -->
+                </div>
+                <!-- end card -->
+            </div>
+
+            <div class="col-xl-6">
+                <div class="card border border-warning">
+                    <div class="card-body">
+                        <p class="isnumber">8</p>
+                        <h4 class="card-title mb-4">Bagaimana pendapat saudara tentang kualitas sarana dan prasaranan pelayanan?</h4>
+
+                            <div class="mt-4">
+                                <div class="form-check form-radio-warning">
+                                    <input class="form-check-input" type="radio" name="sarana" value="1">
+                                    <label class="form-check-label" for="sarana">
+                                        Buruk
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="form-check form-radio-warning">
+                                    <input class="form-check-input" type="radio" name="sarana" value="2">
+                                    <label class="form-check-label" for="sarana">
+                                        Cukup
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="form-check form-radio-warning">
+                                    <input class="form-check-input" type="radio" name="sarana" value="3">
+                                    <label class="form-check-label" for="sarana">
+                                        Baik
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="form-check form-radio-warning ">
+                                    <input class="form-check-input" type="radio" name="sarana" value="4">
+                                    <label class="form-check-label" for="sarana">
+                                        Sangat Baik
+                                    </label>
+                                </div>
+                            </div>
+                    </div>
+                    <!-- end card body -->
+                </div>
+                <!-- end card -->
+            </div>
+
+            <div class="col-xl-12">
+                <div class="card border border-warning">
+                    <div class="card-body">
+                        <h4 class="card-title mb-4">Silahkan masukan saran/ kritik anda.</h4>
+                        <h4 class="card-title mb-4">Terima kasih</h4>
+
+                            <div class="mb-3">
+                                <textarea id="saran_kritik" class="form-control" maxlength="225" rows="7" placeholder=""></textarea>
+                            </div>
+                            <div class="col-sm-auto">
+                                <div class="d-grid gap-2">
+                                    <button type="button" class="btn btn-warning btn-lg waves-effect waves-light" id="kirim_survey">Kirim</button>
+                                </div>
+                            </div>
+                    </div>
+                    <!-- end card body -->
+                </div>
+                <!-- end card -->
+            </div>
+
+
+
+        </div>
+        <!-- end row -->
+        
+    </div> <!-- container-fluid -->
+</div>
+
+
+
+{% endblock %}
